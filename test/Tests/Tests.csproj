@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<!--<TargetFrameworks>$(TestTargetFrameworks)</TargetFrameworks>-->
+		<TargetFrameworks>net6.0</TargetFrameworks>
+
+		<IsPackable>false</IsPackable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.0" />
+		<PackageReference Include="xunit" Version="2.4.0" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+		<PackageReference Include="coverlet.collector" Version="1.2.0" />
+
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="$(WorkspacesVersion)" PrivateAssets="all" />
+		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="$(AnalyzersVersion)" PrivateAssets="all" />
+		<PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Import Remove="System.IO" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\src\CodeGenerator\CodeGenerator.csproj" />
+	  <ProjectReference Include="..\..\src\CodeWriter\CodeWriter.csproj" />
+	</ItemGroup>
+
+</Project>

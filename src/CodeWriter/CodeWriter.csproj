@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>$(GeneratorTargetFrameworks)</TargetFrameworks>
+		<Nullable>enable</Nullable>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.Memory" Version="*" />
+		<PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="*" />
+		<PackageReference Include="Microsoft.Bcl.HashCode" Version="*" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Import Remove="System.IO" />
+	</ItemGroup>
+
+</Project>

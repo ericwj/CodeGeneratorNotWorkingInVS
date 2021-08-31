@@ -1,0 +1,5 @@
+<Project ToolsVersion="15.0">
+	<!--<Import
+		Project="$(MSBuildThisFileDirectory)\build\Specimen.targets"
+		Condition="Exists('$(MSBuildThisFileDirectory)\build\Specimen.targets')"/>-->
+</Project>
